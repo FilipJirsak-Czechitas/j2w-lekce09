@@ -13,24 +13,24 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class OsobaService {
-  private final OsobaRepository osobaRepository;
+    private final OsobaRepository osobaRepository;
 
-  @Autowired
-  public OsobaService(OsobaRepository osobaRepository) {
-    this.osobaRepository = osobaRepository;
-  }
+    @Autowired
+    public OsobaService(OsobaRepository osobaRepository) {
+        this.osobaRepository = osobaRepository;
+    }
 
-  /**
-   * Vrací stránkovaný seznam všech osob v databázi seřazených podle příjmení a jména.
-   */
-  public Page<Osoba> seznamOsob(Pageable pageable) {
-    return osobaRepository.findAll(pageable);
-  }
+    /**
+     * Vrací stránkovaný seznam všech osob v databázi seřazených podle příjmení a jména.
+     */
+    public Page<Osoba> seznamOsob(Pageable pageable) {
+        return osobaRepository.findAll(pageable);
+    }
 
-  /**
-   * Vrací stránkovaný seznam všech osob v databázi, které se narodili mezi uvedenými roky.
-   */
-  public Page<Osoba> seznamDleRokuNarozeni(RokNarozeniForm form, Pageable pageable) {
-    return osobaRepository.findByRok(form.getOd(), form.getDo(), pageable);
-  }
+    /**
+     * Vrací stránkovaný seznam všech osob v databázi, které se narodili mezi uvedenými roky.
+     */
+    public Page<Osoba> seznamDleRokuNarozeni(RokNarozeniForm form, Pageable pageable) {
+        return osobaRepository.findByRok(form.getOd(), form.getDo(), pageable);
+    }
 }

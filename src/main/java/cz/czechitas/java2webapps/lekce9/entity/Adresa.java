@@ -10,55 +10,55 @@ import jakarta.persistence.Id;
  */
 @Entity
 public class Adresa {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  private String ulice;
+    private String ulice;
 
-  private String obec;
+    private String obec;
 
-  private String psc;
+    private String psc;
 
-  public Long getId() {
-    return id;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public String getUlice() {
-    return ulice;
-  }
+    public String getUlice() {
+        return ulice;
+    }
 
-  public void setUlice(String ulice) {
-    this.ulice = ulice;
-  }
+    public void setUlice(String ulice) {
+        this.ulice = ulice;
+    }
 
-  public String getObec() {
-    return obec;
-  }
+    public String getObec() {
+        return obec;
+    }
 
-  public void setObec(String obec) {
-    this.obec = obec;
-  }
+    public void setObec(String obec) {
+        this.obec = obec;
+    }
 
-  public String getPsc() {
-    return psc;
-  }
+    public String getPsc() {
+        return psc;
+    }
 
-  public void setPsc(String psc) {
-    this.psc = psc;
-  }
+    public void setPsc(String psc) {
+        this.psc = psc;
+    }
 
-  public String getJednoradkova() {
-    StringBuilder builder = new StringBuilder();
-    builder.append(ulice);
-    builder.append(", ");
-    builder.append(psc);
-    builder.append(" ");
-    builder.append(obec);
-    return builder.toString();
-  }
+    public String getJednoradkova() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(ulice);
+        builder.append(", ");
+        builder.append(psc);
+        builder.append(" ");
+        builder.append(obec);
+        return builder.toString();
+    }
 }
